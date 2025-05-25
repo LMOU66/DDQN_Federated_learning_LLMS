@@ -26,17 +26,13 @@ def parse_args() -> Args:
 
     # Add command-line
     parser.add_argument("--num_clients", type=int, default=4)
-    parser.add_argument("--teacher_data_pct", type=int, default=None)
     parser.add_argument("--num_rounds", type=int, default=10)
     parser.add_argument('--lora_r', type=int, default=8)
     parser.add_argument('--client_epochs', type=int, default=5)
-    parser.add_argument('--teacher_pretrain_epochs', type=int, default=1)
-    parser.add_argument('--kd_epochs', type=int, default=1)
     parser.add_argument('--teacher_ckpt', type=str, default="bert-base-uncased")
     parser.add_argument('--client_ckpt', type=str, default="distilbert-base-uncased")
 
     parser.add_argument('--client_lr', type=float, default=5e-5)
-    parser.add_argument('--distill_lr', type=float, default=5e-5)
 
     parser.add_argument('--rank', type=int, default=0)
 
